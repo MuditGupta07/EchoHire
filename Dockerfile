@@ -11,8 +11,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy everything else from your current directory
+# Copy everything
 COPY . .
 
-# Run the command exactly as you run it on your system
-CMD ["python", "rank.py", "--candidates", "./candidates.jsonl", "--out", "./submission.csv"]
+# Run the FastAPI server
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "10000"]
