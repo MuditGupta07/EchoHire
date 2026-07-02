@@ -1,0 +1,8 @@
+﻿venv/
+models/
+**/__pycache__/
+faiss_index.bin
+candidates_meta.pkl
+data/candidates.jsonl
+.env
+submission.csv

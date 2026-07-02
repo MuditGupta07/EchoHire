@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary overflow-x-hidden;
+    cursor: none !important;
+  }
+  
+  * {
+    cursor: none !important;
+  }
+}
+
+.glass-panel {
+  backdrop-filter: blur(18px);
+  background: rgba(18, 22, 30, 0.72);
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #16F2B3;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+}
+
+.custom-cursor.active {
+  width: 30px;
+  height: 30px;
+  background: rgba(22, 242, 179, 0.2);
+}
